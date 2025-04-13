@@ -24,7 +24,7 @@
 Run the following command to clone the repository:
 
 ```bash
-git clone https://github.com/jszczepaniak/pytest_autocomplete ~/.oh-my-zsh/custom/plugins/zsh-pytest-fzf
+git clone https://github.com/jszczepaniak/zsh-pytest-fzf ~/.oh-my-zsh/custom/plugins/zsh-pytest-fzf
 ```
 
 ### 2. Plugin activation
