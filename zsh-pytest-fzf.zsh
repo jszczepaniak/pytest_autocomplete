@@ -31,7 +31,11 @@ fzf-pytest-test-selector() {
 
   # Collect pytest tests and pass them to fzf
   local selected_test
-  selected_test=$(pytest --collect-only -q 2>/dev/null | fzf)
+  if command_exists python; then
+    selected_test=$(python -m pytest --collect-only -q 2>/dev/null | fzf)
+  else
+    selected_test=$(python3 -m pytest --collect-only -q 2>/dev/null | fzf)
+  fi
 
   # If a test was selected, insert it into the command line
   if [[ -n "$selected_test" ]]; then
